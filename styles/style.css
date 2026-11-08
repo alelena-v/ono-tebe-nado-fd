@@ -1,17 +1,3 @@
-body {
-  background-color: #fff;
-  color: #000;
-  line-height: 1.5;
-}
-
-a {
-  color: inherit;
-}
-
-img {
-  display: block;
-}
-
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
@@ -22,28 +8,15 @@ img {
 }
 
 .header_links-list {
-  display: block;
+  display: flex;
+  gap: 32px;
   margin: 0;
   padding: 0;
   list-style: circle;
 }
 
-.header_links-list::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.header_links-list-item {
-  display: list-item;
-  float: left;
-  margin-right: 32px;
-  font-size: 18px;
-  line-height: 22px;
-}
-
-.header_links-list-item:last-child {
-  margin-right: 0;
+.header_links-list-item::marker {
+  color: #000;
 }
 
 .header_links-list-item_no-bullit {
@@ -56,10 +29,6 @@ img {
   line-height: 22px;
   text-decoration: underline;
   color: inherit;
-}
-
-.header_link:hover {
-  text-decoration: underline;
 }
 
 .header_link_active {
@@ -80,39 +49,34 @@ img {
 }
 
 .address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   font-style: normal;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24.3px;
+  color: #000;
+}
+
+.address a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 .header_address {
   justify-self: end;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   max-width: 240px;
   text-align: left;
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 24.3px;
-  color: inherit;
-}
-
-.header_address a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-.header_address a:hover {
-  text-decoration: underline;
-}
-
-.header_address p {
-  margin: 0;
 }
 
 .cover {
   position: relative;
   min-height: 757px;
-  background: url("../images/cover.jpg") no-repeat center / cover;
+  background-image: url("../images/cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   color: #fff;
   overflow: hidden;
 }
@@ -343,7 +307,6 @@ img {
 }
 
 .about__text p {
-  margin: 0;
   font-size: 20px;
   line-height: 24px;
 }
@@ -358,32 +321,6 @@ img {
   box-sizing: border-box;
   background: #fff;
   color: #000;
-}
-
-.footer__address {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 24px;
-  color: #000;
-}
-
-.footer__address a {
-  display: block;
-  color: inherit;
-  text-decoration: underline;
-  line-height: 24px;
-}
-
-.footer__address a:hover {
-  text-decoration: underline;
-}
-
-.footer__address p {
-  margin: 1px 0 0 0;
-  line-height: 24.3px;
 }
 
 .footer__menu-list {
